@@ -1,0 +1,114 @@
+--- Log started at Sat Aug 16 19:58:52 2025 ---
+
+Preprocessing text data...
+Vectorizing text data with TF-IDF...
+
+Data loaded successfully. Shape of X: (10600, 15763), Shape of y: (10600,)
+Shape of X_train: (8480, 15763), Shape of y_train: (8480,)
+Shape of X_test:  (1060, 15763), Shape of y_test:  (1060,)
+Shape of X_val:   (1060, 15763), Shape of y_val:   (1060,)
+
+--- Training K-Nearest Neighbors (KNN) ---
+KNN training completed in 4.31 seconds.
+Best parameters for KNN: {'metric': 'euclidean', 'n_neighbors': 3}
+KNN Accuracy: 0.8858
+Classification Report for KNN:
+              precision    recall  f1-score   support
+
+           0       0.93      0.84      0.88       530
+           1       0.85      0.93      0.89       530
+
+    accuracy                           0.89      1060
+   macro avg       0.89      0.89      0.89      1060
+weighted avg       0.89      0.89      0.89      1060
+
+--------------------------------------------------
+
+--- Training Logistic Regression ---
+Logistic Regression training completed in 1.80 seconds.
+Best parameters for Logistic Regression: {'C': 10, 'solver': 'liblinear'}
+Logistic Regression Accuracy: 0.9491
+Classification Report for Logistic Regression:
+              precision    recall  f1-score   support
+
+           0       0.95      0.94      0.95       530
+           1       0.94      0.95      0.95       530
+
+    accuracy                           0.95      1060
+   macro avg       0.95      0.95      0.95      1060
+weighted avg       0.95      0.95      0.95      1060
+
+--------------------------------------------------
+
+--- Training Support Vector Machine (SVM) ---
+SVM training completed in 11.03 seconds.
+Best parameters for SVM: {'C': 1}
+SVM Accuracy: 0.9500
+Classification Report for SVM:
+              precision    recall  f1-score   support
+
+           0       0.95      0.95      0.95       530
+           1       0.95      0.95      0.95       530
+
+    accuracy                           0.95      1060
+   macro avg       0.95      0.95      0.95      1060
+weighted avg       0.95      0.95      0.95      1060
+
+--------------------------------------------------
+
+--- Training K-Means Clustering ---
+K-Means cluster 0 mapped to class 0, cluster 1 to class 1.
+K-Means training completed in 0.39 seconds.
+K-Means Accuracy: 0.5896
+Classification Report for K-Means:
+              precision    recall  f1-score   support
+
+           0       0.56      0.86      0.68       530
+           1       0.70      0.32      0.44       530
+
+    accuracy                           0.59      1060
+   macro avg       0.63      0.59      0.56      1060
+weighted avg       0.63      0.59      0.56      1060
+
+--------------------------------------------------
+
+--- Training Gradient Boosting ---
+Gradient Boosting training completed in 82.19 seconds.
+Best parameters for Gradient Boosting: {'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 200}
+Gradient Boosting Accuracy: 0.9453
+Classification Report for Gradient Boosting:
+              precision    recall  f1-score   support
+
+           0       0.94      0.95      0.95       530
+           1       0.95      0.94      0.94       530
+
+    accuracy                           0.95      1060
+   macro avg       0.95      0.95      0.95      1060
+weighted avg       0.95      0.95      0.95      1060
+
+--------------------------------------------------
+
+--- Training Neural Network (MLP) ---
+MLP training completed in 469.07 seconds.
+Best parameters for MLP: {'activation': 'tanh', 'alpha': 0.001, 'hidden_layer_sizes': (100,)}
+MLP Accuracy: 0.9481
+Classification Report for MLP:
+              precision    recall  f1-score   support
+
+           0       0.95      0.94      0.95       530
+           1       0.94      0.95      0.95       530
+
+    accuracy                           0.95      1060
+   macro avg       0.95      0.95      0.95      1060
+weighted avg       0.95      0.95      0.95      1060
+
+--------------------------------------------------
+
+Final Model Performance (Accuracy Scores):
+
+SVM                 : 0.9500
+Logistic Regression : 0.9491
+Neural Network      : 0.9481
+Gradient Boosting   : 0.9453
+KNN                 : 0.8858
+K-Means             : 0.5896
